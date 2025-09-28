@@ -1,0 +1,463 @@
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(242, 213, 174) !important;
+}
+.nav-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+.nav-underline:hover::after {
+  width: 100%;
+}
+.animed-link{
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: #faf5f5;
+ background-color: transparent;
+  position: absolute;
+  transform: translate(50%, 50%);
+  top: -10px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+
+/* .animed-link{
+  background-color: transparent;
+  overflow: hidden;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+  color: rgba(7, 7, 7, 0.952);
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease, border-color 0.3s ease;
+} */
+
+
+.animed-link::before {
+  content: "";
+  position: absolute;
+  height: 0px;
+  bottom: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  transition: height 0.3s ease;
+  z-index: -1; 
+  background-color: rgba(0, 0, 0, 0.836);
+  border-radius: 30px;
+} 
+
+.animed-link:hover::before {
+  height: 100%;
+  
+}
+.animed-link:hover{
+    color: white !important;
+
+}
+
+
+
+.btn-back-fixed {
+    position: fixed;
+    top: 60px;
+    left: 20px;
+    z-index: 9999;
+    background-color: #010710c6;
+    color: rgb(242, 241, 241);
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .btn-back-fixed i {
+    margin-right: 8px;
+  }
+
+  .btn-back-fixed:hover {
+    background-color: #084298;
+    transform: translateY(-2px);
+    color: #fff;
+  }
+
+
+/* navbar title untderling */
+/* Navbar personnalisée */
+.navbar {
+  padding: 5px 10px;
+  height: 60px;
+  background-color: rgba(250, 235, 215, 0.95); /* beige clair */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.navbar-nav > .nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.navbar .nav-link{
+  white-space: nowrap !important;
+}
+
+@media (max-width: 576px){
+  .navbar img{
+    height: 50px;
+  }
+
+  .animed-link{
+ all: unset;
+
+}
+.animed-link::before{
+content:unset;
+all: unset;
+}
+
+}
+
+/* Animation soulignée sur les liens */
+.text-underline {
+  display: flex !important;
+  font-size: 10px !important;
+  transition: color 0.3s ease;
+}
+
+.text-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background-color: green;
+  transition: width 0.4s ease;
+}
+
+.text-underline:hover::after {
+  width: 100%;
+}
+
+
+/* whatsap-image */
+
+.background-image{
+
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, rgb(47, 47, 46), rgba(83, 82, 82, 0.829), rgba(65, 71, 73, 0.409));
+}
+.background-image img{
+  position: absolute;
+}
+.background-image .text{
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.background {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* .overlay {
+  position: absolute;
+  width: 20%;
+  max-width: 100px;
+  height: auto;
+} */
+
+.top-left {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+}
+
+
+.image-center {
+  position: absolute;
+  top: 40%;
+  left:40%;
+}
+
+/* .background-image img:nth-of-type(3){
+  position: absolute;
+} */
+
+
+.Speak-freely{
+  background-color: rgb(27, 27, 27);
+  width: 100%;
+  height: 100vh;
+  height: 100%;
+  
+  
+}
+.Speak-freely .row{
+  padding: 20px;
+}
+.row img{
+  margin-left: 50px;
+  margin-top: 40px;
+  height: 100%;
+  width: 70%;
+}
+
+/*  */
+
+.mynav-button a{
+  border: 2px solid black !important;
+}
+
+
+    /* <!-- whatssap page avec des bulles de comminication --> */
+
+
+.floating-img {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+.message-bubble {
+  position: absolute;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  z-index: 1;
+  white-space: wrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li a {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer ul li :hover a{
+  text-decoration: underline;
+}
+.learn-more{
+  text-decoration: none;
+  color: rgb(18, 25, 32);
+  font-weight: bold;
+  border-bottom: 3px solid green;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+/* button remplissage fluide  */
+/* .learn-more{
+  background-color: transparent;
+  overflow: hidden;
+  position: absolute;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 10px 20px;
+  z-index: 2;
+}
+.learn-more:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0%;
+  width: 100%;
+  transition: height 0.3s ease;
+  z-index: -1; 
+  background-color: black;
+
+}
+
+.learn-more:hover:before {
+  height: 100%;
+}
+
+.learn-more:hover {
+  color: green;
+  border-color: green;
+} */
+
+.learn-more {
+  background-color: transparent;
+  overflow: hidden;
+  position: absolute;
+  transform: translate(-50%, -50%); /* ✅ centre total */
+  cursor: pointer;
+  z-index: 2;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.learn-more::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0%;
+  width: 100%;
+  transition: height 0.3s ease;
+  z-index: -1; 
+  background-color: black;
+  border-radius: 30px;
+}
+
+.learn-more:hover::before {
+  height: 100%;
+}
+
+.learn-more:hover {
+  color: whitesmoke;
+}
+
+
+
+.learn-more-freely{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border-bottom: 3px solid green;
+  transition: color 0.3s ease;
+}
+.learn-more-freely:hover {
+  color: green;
+  border-color: green;
+}
+.learn-more-1{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  border-bottom: 3px solid green;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.learn-more-1:hover {
+  color: green;
+  border-color: green;
+}
+
+
+#scrollLeft,
+#scrollRight {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 2;
+  border: 2px solid #000;
+  color: black;
+  font-weight: bolder;
+  font-size: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden; /* 👈 nécessaire pour cacher l’effet qui déborde */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Flèche toujours au-dessus */
+#scrollLeft::before,
+#scrollRight::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: black;
+  transition: height 0.3s ease;
+  z-index: -1; /* 👈 placé derrière le texte */
+  border-radius: 50%;
+}
+
+/* Hover : remplissage vers le haut */
+#scrollLeft:hover::before,
+#scrollRight:hover::before {
+  height: 100%;
+}
+
+/* Changer la couleur de la flèche sur hover */
+#scrollLeft:hover,
+#scrollRight:hover {
+  color: white;
+}
+
+/* Scroll buttons */
+#scrollLeft {
+  left: 20px;
+  top: 55%;
+  transform: translateY(-50%);
+}
+#scrollRight {
+  left: 100px;
+  top: 55%;
+}
+
+.dropdown{
+  margin-right: 10px;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+    font-size: 14px !important;
+    text-align: start;
+  }
+  .dropdown .dropdown-menu a:hover{
+        color: tomato !important;
+        font-weight: bold;
+        background-color: black;
+  }
+
+/* hover , remplier du bas en haut */
+
